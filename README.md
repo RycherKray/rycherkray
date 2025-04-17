@@ -1,34 +1,45 @@
-# 👋 Hey there! I'm Rycher Kray
+# 🏦 LoanFlow
 
-Senior Full Stack Developer | .NET, Angular, Azure, Microservices
+**LoanFlow** is a minimalist, end‑to‑end **loan‑origination demo** that shows how I build
+event‑driven, cloud‑native systems with .NET 8, Angular 17, and Azure.
 
-With 9 years of experience building distributed systems and scalable APIs, I specialize in crafting clean backend architecture using .NET Core + Azure, and beautiful UIs with Angular and TypeScript.
+<img src="docs/media/loanflow-arch.svg" alt="architecture diagram" width="640"/>
 
----
+> 🧠 **Why this repo exists**  
+> Hiring panels often ask, *“Can you show real code that proves you know micro‑services, async messaging, and clean architecture?”*  
+> LoanFlow is the answer: clone → run → see a loan request travel UI → API → Service Bus → Function → Cosmos DB in under 60 seconds.
 
-## 🚀 Featured Project
+## ✨ Key Features
+| Capability | Snapshot impact |
+|------------|-----------------|
+| **Angular portal** submits loan data and polls status. | Demonstrates RxJS, reactive forms, and API integration. |
+| **ASP.NET Core API** isolates domain logic via MediatR. | Clean Architecture + async/await best practices. |
+| **Azure Service Bus** decouples write & processing paths. | Resilient to spikes; retry & DLQ policies configured. |
+| **Azure Function** processes queue events server‑lessly. | Scales to zero; logs to App Insights. |
+| **Cosmos DB** stores loan docs in a partitioned container. | NoSQL modelling for high‑volume fintech workloads. |
+| **CI/CD** YAML deploys API to Azure App Service with Key Vault secrets. | Proof of DevOps ownership. |
 
-### 🏦 [LoanFlowSystem](https://github.com/rycherkray/LoanFlowSystem)
-An event-driven loan origination system simulating modern banking architecture.
+## 🔧 Full Tech Stack
+| Layer | Tech |
+|-------|------|
+| Frontend | Angular 17, TypeScript, RxJS |
+| Backend | ASP.NET Core 8, C#, MediatR |
+| Messaging | Azure Service Bus (queue) |
+| Processing | Azure Functions (.NET 8) |
+| Storage | Azure Cosmos DB |
+| Security | Azure Key Vault |
+| DevOps | Azure DevOps Pipelines |
+| Testing | xUnit, SpecFlow (soon) |
 
-**Tech Stack:**
-`.NET 8` | `ASP.NET Core` | `Azure Service Bus` | `Cosmos DB` | `Angular 16` | `Clean Architecture` | `Kafka`
+## 🚀 Quick Start (dev)
+```bash
+git clone https://github.com/rycherkray/LoanFlow.git
+cd LoanFlow
 
-**Key Features:**
-- Microservice-based architecture with domain boundaries
-- Async messaging using Service Bus + background workers
-- Angular dashboard for loan application flow
-- Secure token-based authentication (JWT)
-- CI/CD ready (Azure DevOps YAML pipeline)
+# backend
+dotnet run --project src/LoanFlow.Api
 
----
-
-## 🛠️ Tools & Skills
-`C#` `ASP.NET Core` `.NET 8` `Entity Framework` `Angular` `RxJS` `Azure` `Kafka` `Docker` `Kubernetes` `SQL Server` `Cosmos DB`
-
----
-
-## 📫 Connect with Me
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/rycher-kray)
-- ✉️ rycherkray@gmail.com
+# frontend
+cd loanflow-portal
+npm install
+npm start         # proxy → https://localhost:5001
