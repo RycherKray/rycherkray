@@ -3,8 +3,6 @@
 **LoanFlow** is a minimalist, end‑to‑end **loan‑origination demo** that shows how I build
 event‑driven, cloud‑native systems with .NET 8, Angular 17, and Azure.
 
-<img src="docs/media/loanflow-arch.svg" alt="architecture diagram" width="640"/>
-
 > 🧠 **Why this repo exists**  
 > Hiring panels often ask, *“Can you show real code that proves you know micro‑services, async messaging, and clean architecture?”*  
 > LoanFlow is the answer: clone → run → see a loan request travel UI → API → Service Bus → Function → Cosmos DB in under 60 seconds.
