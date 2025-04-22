@@ -26,7 +26,7 @@ event‑driven, cloud‑native systems with .NET 8, Angular 17, and Azure.
 | Processing | Azure Functions (.NET 8) |
 | Storage | Azure Cosmos DB |
 | Security | Azure Key Vault |
-| DevOps | Azure DevOps Pipelines |
+| DevOps | Git Actions |
 | Testing | xUnit, SpecFlow (soon) |
 
 ## 🚀 Quick Start (dev)
